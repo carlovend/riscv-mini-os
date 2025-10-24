@@ -1,0 +1,3 @@
+theme: jekyll-theme-cayman
+title: "RISC-V Mini OS"
+description: "Educational microkernel in C — built step by step following OS in 1000 Lines"
