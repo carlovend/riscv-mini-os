@@ -1,3 +1,4 @@
 theme: jekyll-theme-primer
 title: "RISC-V Mini OS"
 description: "Educational microkernel in C — built step by step following OS in 1000 Lines"
+color_scheme: dark
