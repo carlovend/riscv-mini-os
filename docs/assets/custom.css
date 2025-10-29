@@ -1,0 +1,59 @@
+
+:root {
+  --bg: #0b1220;
+  --panel: #0f1630;
+  --text: #e6ecff;
+  --muted: #9bb0d3;
+  --brand: #4ea1ff;
+  --brand-2: #8bc7ff;
+  --ok: #4caf50;
+  --accent: #ffd166;
+}
+
+body { background: var(--bg); color: var(--text); }
+a { color: var(--brand); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.hero {
+  text-align: center;
+  padding: 3rem 1rem 2rem;
+  background: linear-gradient(180deg, rgba(78,161,255,0.15), transparent 60%);
+  border-radius: 16px;
+}
+.hero h1 {
+  margin: 0 0 .5rem;
+  font-size: 2.4rem;
+  letter-spacing: .5px;
+}
+.subtitle { color: var(--muted); margin: 0 auto 1.25rem; max-width: 720px; }
+.badges img { margin: .2rem .25rem; vertical-align: middle; }
+.cta { margin-top: 1rem; }
+.btn {
+  display: inline-block;
+  margin: .25rem;
+  padding: .6rem 1rem;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.15);
+  color: var(--text);
+  background: rgba(255,255,255,0.03);
+}
+.btn.primary { background: linear-gradient(90deg, var(--brand), var(--brand-2)); color: #031025; font-weight: 600; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 12px;
+}
+.card {
+  display: block;
+  background: var(--panel);
+  padding: 1rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: transform .1s ease, border-color .2s ease;
+}
+.card:hover { transform: translateY(-2px); border-color: rgba(255,255,255,0.18); }
+.card h3 { margin: 0 0 .25rem; }
+.card p { margin: 0 0 .5rem; color: var(--muted); }
+.card .tag { font-size: .75rem; background: rgba(255,255,255,0.06); padding: .2rem .5rem; border-radius: 999px; }
+.card.done { outline: 1px solid rgba(76,175,80,.5); }

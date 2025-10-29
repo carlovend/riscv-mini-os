@@ -1,4 +1,4 @@
-# 🧰 M0 – Setting Up the Development Environment
+# M0 – Setting Up the Development Environment
 
 ## 🎯 Goal
 Set up a cross-compilation toolchain and emulator for building a bare-metal RISC-V kernel.
