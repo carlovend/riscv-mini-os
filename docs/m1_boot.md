@@ -39,7 +39,7 @@ Since there is no operating system or default linker configuration in bare-metal
 
 ### Example: `linker.ld`
 
-```ld
+``` ld
 ENTRY(boot)
 
 SECTIONS {
@@ -68,6 +68,7 @@ SECTIONS {
     . += 128 * 1024; /* Reserve 128KB for the stack */
     __stack_top = .;
 }
+
 ```
 
 ### Key Points
@@ -117,6 +118,7 @@ void boot(void) {
         : [stack_top] "r" (__stack_top)
     );
 }
+
 ```
 
 ### Explanation
@@ -146,7 +148,7 @@ Since there are no uninitialized globals yet, this loop currently does nothing, 
 
 When disassembling `kernel.elf`, you should see:
 
-```
+```c 
 80200000 <boot>:
     mv sp, 0x80220000
     j  kernel_main

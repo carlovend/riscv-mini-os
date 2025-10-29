@@ -10,7 +10,4 @@ Based on the official [Operating System in 1000 Lines guide](https://operating-s
    → Verified with `riscv64-unknown-elf-gcc --version`
 2. Installed `qemu-system-riscv32`  
    → Verified with `qemu-system-riscv32 --version`
-3. Cloned the starter code and ran:
-   ```bash
-   make run
-   ```
+3. Cloned the starter code and ran: make run
