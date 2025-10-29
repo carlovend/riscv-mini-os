@@ -84,7 +84,7 @@ If you enter the QEMU monitor by accident, press `Ctrl+a` then `c` to toggle bac
 ## Articles
 - M0 — Setup & Toolchain → <a href="m0_setup.md">read</a><br/>
 - M1 — Boot & Linker Script → <a href="m1_boot.md">read</a><br/>
-- Appendix — OpenSBI & Boot Deep Dive → <a href="appendix-opensbi.md.md">read</a>
+- Appendix — OpenSBI & Boot Deep Dive → <a href="appendix-opensbi.md">read</a>
 
 ---
 

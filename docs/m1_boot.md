@@ -153,7 +153,7 @@ When disassembling `kernel.elf`, you should see:
 
 80200024 <kernel_main>:
     ...
-``
+```
 
 At this point, OpenSBI successfully handed control to your kernel, the stack was initialized, and your kernel is running in Supervisor mode.
 

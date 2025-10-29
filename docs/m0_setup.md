@@ -13,3 +13,4 @@ Based on the official [Operating System in 1000 Lines guide](https://operating-s
 3. Cloned the starter code and ran:
    ```bash
    make run
+   ```
