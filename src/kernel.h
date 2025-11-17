@@ -1,5 +1,6 @@
 #pragma once
 #include "common.h"
+#define PAGE_SIZE 4096
 
 struct trap_frame {
     uint32_t ra;

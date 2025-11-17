@@ -127,11 +127,28 @@ void handle_trap(struct trap_frame *f) {
     PANIC("unexpected trap scause=%x, stval=%x, sepc=%x\n", scause, stval, user_pc);
 }
 
+extern char __free_ram[], __free_ram_end[];
+
+paddr_t alloc_pages(uint32_t n) {
+    static paddr_t next_paddr = (paddr_t) __free_ram;
+    paddr_t paddr = next_paddr;
+    next_paddr += n * PAGE_SIZE;
+
+    if (next_paddr > (paddr_t) __free_ram_end)
+        PANIC("out of memory");
+
+    memset((void *) paddr, 0, n * PAGE_SIZE);
+    return paddr;
+}
 
 
 void kernel_main(void) {
     memset(__bss, 0, (size_t) __bss_end - (size_t) __bss);
 
-    WRITE_CSR(stvec, (uint32_t) kernel_entry); // new
-    __asm__ __volatile__("unimp"); // new
+    paddr_t paddr0 = alloc_pages(2);
+    paddr_t paddr1 = alloc_pages(1);
+    printf("alloc_pages test: paddr0=%x\n", paddr0);
+    printf("alloc_pages test: paddr1=%x\n", paddr1);
+
+    PANIC("booted!");
 }
