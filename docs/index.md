@@ -13,18 +13,27 @@ This is the linear progression of the project.
     * Set up the cross-compiler, QEMU, and build environment.
 
 2.  **[M1 – Boot & Linker Script](m1_boot.md)**
-    * Implement the boot process from OpenSBI, set up the stack, and zero the `.bss` section before C entry.
+    * Implement the boot process from OpenSBI, set up the stack, and zero the `.bss` section.
 
-3.  **[M2 – Paging & TLB](m2_paging.md)**
+3.  **[M2 – UART, `printf` & LibC](m2-printf.md)** (NUOVO)
+    * Implement a `putchar` driver, a `printf` variadic function, and a minimal `common.h` library.
+
+4.  **[M3 – Exception Handling & `panic`](m3-exceptions.md)** (NUOVO)
+    * Implement the `panic` macro and the full S-Mode exception trap flow (asm entry, `trap_frame`, CSR macros).
+
+5.  **[M4 – Memory: The Page Allocator](m4-memory.md)** (NUOVO)
+    * Define the free memory region in the linker script and implement the `alloc_pages` bump allocator.
+
+6.  **[M5 – Paging & TLB](m5_paging.md)** (Era M2)
     * Configure `satp`, create page tables, and handle page faults.
 
-4.  **[M3 – Processes & Context Switch](m3_processes.md)**
+7.  **[M6 – Processes & Context Switch](m6_processes.md)** (Era M3)
     * Define a Process Control Block (PCB), a round-robin scheduler, and handle trap returns.
 
-5.  **[M4 – System Calls](m4_syscalls.md)**
+8.  **[M7 – System Calls](m7_syscalls.md)** (Era M4)
     * Implement the user-mode/kernel-mode boundary, validation, and ABI.
 
-6.  **[M5 – Minimal FS](m5_filesystem.md)**
+9.  **[M8 – Minimal FS](m8_filesystem.md)** (Era M5)
     * Block management, inodes, and integration with a mini-shell.
 
 ---
@@ -36,13 +45,23 @@ Technical deep-dives on specific topics.
 * **[Appendix — OpenSBI & Boot Deep Dive](appendix-opensbi.md)**
     * Details on OpenSBI, the QEMU boot flow, and disassembly analysis.
 
+* **[Appendix — Come `printf` Stampa i Numeri](appendix-printf-int.md)** 
+    * Explanation of the algorithm used to convert an int into a character string (division and modulo).
+
+
+* **[Appendix — Anatomia di un'Eccezione](appendix-exception-flow.md)** 
+    * Full hardware/software flow of a RISC-V trap, from sepc to sret.
+
+* **[Appendix — Il Problema della Frammentazione](appendix-fragmentation.md)** 
+    * Explanation of internal vs. external fragmentation and why paging solves the issue.
+
 ---
 
 ## Quickstart
 
 ```bash
 # Clone & build
-git clone [https://github.com/](https://github.com/)<YOUR-USER>/riscv-mini-os.git
+git clone [https://github.com/carlovend/riscv-mini-os.git](https://github.com/carlovend/riscv-mini-os.git)
 cd riscv-mini-os
 make
 
