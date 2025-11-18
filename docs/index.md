@@ -48,7 +48,7 @@ Technical deep-dives on specific topics.
 * **[Appendix — How `printf` print numbers](appendix-printf-int.md)** 
     * Explanation of the algorithm used to convert an int into a character string (division and modulo).
 
-* **[Appendix — Il Problema della Frammentazione](appendix-fragmentation.md)** 
+* **[Appendix — Fragmentation problem](appendix-fragmentation.md)** 
     * Explanation of internal vs. external fragmentation and why paging solves the issue.
 
 ---
