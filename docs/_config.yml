@@ -1,4 +1,19 @@
-theme: jekyll-theme-midnight
 title: "RISC-V Mini OS"
 description: "Educational microkernel in C — built step by step following OS in 1000 Lines"
-color_scheme: dark
+
+# Usa un tema moderno hostato su GitHub
+remote_theme: just-the-docs/just-the-docs
+
+color_scheme: dark   # puoi mettere 'light' o rimuoverlo per default
+
+# URL del sito (aggiorna con il tuo username se pubblichi da /repo)
+url: "https://carlovend.github.io"
+baseurl: "/riscv-mini-os"
+
+# Impostazioni Just the Docs
+just_the_docs:
+  logo: ""          # opzionale: puoi mettere un path a un logo
+  favicon_ico: ""   # opzionale
+  nav_external_links:
+    - title: GitHub Repository
+      url: https://github.com/carlovend/riscv-mini-os
