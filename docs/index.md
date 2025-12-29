@@ -31,16 +31,13 @@ This is the linear progression of the project.
 5. **[M4 – Memory: The Page Allocator](m4-memory.md)**  
    Define the free memory region in the linker script and implement the `alloc_pages` bump allocator.
 
-6. **[M5 – Paging & TLB](m5_paging.md)**  
-   Configure `satp`, create page tables, and handle page faults.
-
-7. **[M6 – Processes & Context Switch](m6_processes.md)**  
+6. **[M5 – Processes & Context Switch](m5-processes.md)**  
    Define a Process Control Block (PCB), a round-robin scheduler, and handle trap returns.
 
-8. **[M7 – System Calls](m7_syscalls.md)**  
+7. **[M6 – System Calls](m7_syscalls.md)**  
    Implement the user-mode/kernel-mode boundary, validation, and ABI.
 
-9. **[M8 – Minimal FS](m8_filesystem.md)**  
+8. **[M7 – Minimal FS](m8_filesystem.md)**  
    Block management, inodes, and integration with a mini-shell.
 
 ---
