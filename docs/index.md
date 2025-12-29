@@ -31,7 +31,7 @@ This is the linear progression of the project.
 5. **[M4 – Memory: The Page Allocator](m4-memory.md)**  
    Define the free memory region in the linker script and implement the `alloc_pages` bump allocator.
 
-6. **[M5 – Processes & Context Switch](m5-processes.md)**  
+6. **[M5 – Processes & Context Switch](m5-process.md)**  
    Define a Process Control Block (PCB), a round-robin scheduler, and handle trap returns.
 
 7. **[M6 – System Calls](m7_syscalls.md)**  
